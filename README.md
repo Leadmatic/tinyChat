@@ -55,7 +55,7 @@ To train the PEFT model with LORA, follow these steps:
 2. Run the `train.py` script:
 
 ```
-python train.py
+python train.py --output_dir tinyChatModel
 ```
 
 3. The script will train the model and save the trained model in the `output` directory.
