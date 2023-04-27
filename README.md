@@ -111,7 +111,7 @@ Prompt: Write a poem
 
 ```python
 import transformers
-from transformers import PeftModel
+from peft import PeftModel
 
 model_name = "google/flan-t5-large"
 peft_model_id = "Leadmatic/tinyChat"
