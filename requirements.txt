@@ -1,0 +1,7 @@
+transformers>=4.0.0
+torch>=1.7.0
+pandas>=1.0.0
+pyarrow>=1.0.0
+sentencepiece>=0.1.98
+peft>=0.2.0
+bitsandbytes>=0.38.1
