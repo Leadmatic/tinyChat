@@ -67,6 +67,10 @@ You can modify the `train.py` script to use different model configurations or tr
 For example, you can change the default model by updating the `model_name_or_path` field, or modify the LORA configuration by updating the `lora_r`, `lora_alpha`, and other LORA-related fields.
 
 
+### HuggingFace Model Card
+
+Trained model can be found at [HuggingFace Model Hub](https://huggingface.co/Leadmatic/tinyChat)
+
 
 ### License
 
