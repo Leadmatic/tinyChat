@@ -67,6 +67,46 @@ You can modify the `train.py` script to use different model configurations or tr
 For example, you can change the default model by updating the `model_name_or_path` field, or modify the LORA configuration by updating the `lora_r`, `lora_alpha`, and other LORA-related fields.
 
 
+### What can tinyChat do?
+
+TinyChat like Flan-T5 can perform well on a variety of NLP tasks such as question answering with tinyChat improving on Flan-T5s creative capabilities and summarization.
+
+#### Question and Answering
+
+In the example below, the question asks which country is mentioned in the input with the name of the country not disclosed. Both models are accurately able to determine the country is Morocco.
+
+Prompt: What country did the event take place? Provide only the name of the COUNTRY.
+
+Input: The event took place in Casablanca.
+
+| Model | Response |
+| --- | --- |
+| Flan-T5 | Morocco |
+| TinyChat | Morocco |
+
+#### Summarization
+
+In the following example, the models are prompted to summarize the Wikipedia entry for the video game Witcher 3. Flan-T5 is not able to provide an accurate summary while TinyChat is able to provide one.
+
+| Model | Response |
+| --- | --- |
+| Flan-T5 | The Witcher 3: Wild Hunt |
+| TinyChat | The Witcher 3: Wild Hunt is an action role-playing game developed and published by CD Projekt Red. The game is the third in the series and takes place in a magical world, where Geralt is the first witcher character. Players battle monsters, build powerful spells and use a series of spells to protect himself and his adopted daughter from the Wild Hunt. The game has set the bar for an open world game series. |
+
+#### Creative Text Generation
+
+Both models were asked to write a poem. In comparison to Flan-T5, TinyChat showed longer prose and creativity in its output.
+
+Prompt: Write a poem
+
+| Model | Response |
+| --- | --- |
+| Flan-T5 | i love chocolate so i got 2 bags of them |
+| TinyChat | This poem is so beautiful - the beauty of the nature, the richness of the trees, the silence of the birds - everything is so peaceful, the way nature flows and the time always reaches such a happy destination. I think it's beautiful in its simplicity and beauty, the beauty of life, the way nature flows. As we look out across the bright fields and trees, it's so simple and yet such a powerful force that changes the whole environment. |
+
+
+
+
 ### HuggingFace Model Card
 
 Trained model can be found at [HuggingFace Model Hub](https://huggingface.co/Leadmatic/tinyChat)
