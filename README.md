@@ -3,8 +3,11 @@
 # tinyChat 
 tinyChat is an instruction-based large language model (LLM) that harnesses recent breakthroughs in open-source machine learning, such as Databrick's Dolly dataset and Microsoft's LoRA, to deliver NLP capabilities at a fraction of the size of GPT-3.5. tinyChat leverages the Google Flan-T5-Large 770M parameter model as its base combined with adaptor weights trained on the Dolly 15k dataset. This is accomplished using a method of training known as LoRA. tinyChat provides ChatGPT-like capabilities on tasks like summarization, question answering, and sentiment analysis, while remaining open source under the Apache 2.0 license and at 1% the size of GPT-3.5. This project aims to initiate discussions around efficient model architectures and responsible use of generative AI. Its acccessible via HuggingFace model hub and with its code repository on Github, tinyChat is available for experimentation and contribution. 
 
-NOTE: This project is early in development.
+This project is early in development and is intended for research purposes.
 
+### HuggingFace Model Card
+
+Trained model can be found at [HuggingFace Model Hub](https://huggingface.co/Leadmatic/tinyChat)
 
 ### Prerequisites
 
@@ -120,11 +123,6 @@ inputs = tokenizer("""[INSERT INSTRUCTION HERE]""", return_tensors="pt")
 outputs = peft_model.generate(**inputs, max_length=300, do_sample=True)
 print(tokenizer.batch_decode(outputs, skip_special_tokens=True))
 ```
-
-### HuggingFace Model Card
-
-Trained model can be found at [HuggingFace Model Hub](https://huggingface.co/Leadmatic/tinyChat)
-
 
 ### License
 
