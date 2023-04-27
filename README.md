@@ -104,8 +104,22 @@ Prompt: Write a poem
 | Flan-T5 | i love chocolate so i got 2 bags of them |
 | TinyChat | This poem is so beautiful - the beauty of the nature, the richness of the trees, the silence of the birds - everything is so peaceful, the way nature flows and the time always reaches such a happy destination. I think it's beautiful in its simplicity and beauty, the beauty of life, the way nature flows. As we look out across the bright fields and trees, it's so simple and yet such a powerful force that changes the whole environment. |
 
+### Run Inference
 
+```python
+import transformers
+from transformers import PeftModel
 
+model_name = "google/flan-t5-large"
+peft_model_id = "Leadmatic/tinyChat"
+tokenizer = transformers.AutoTokenizer.from_pretrained(model_name)
+base_model = transformers.AutoModelForSeq2SeqLM.from_pretrained(model_name)
+peft_model = PeftModel.from_pretrained(base_model, peft_model_id)
+
+inputs = tokenizer("""[INSERT INSTRUCTION HERE]""", return_tensors="pt")
+outputs = peft_model.generate(**inputs, max_length=300, do_sample=True)
+print(tokenizer.batch_decode(outputs, skip_special_tokens=True))
+```
 
 ### HuggingFace Model Card
 
