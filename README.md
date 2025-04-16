@@ -1,5 +1,8 @@
 ![Banner](tinyChat.jpeg)
 
+# This Project Is Now Archived
+tinyChat was an exploratory project in the use of small language models. There are now numerous production-quality models available in this category.
+
 # tinyChat 
 tinyChat is an instruction-based large language model (LLM) that harnesses recent breakthroughs in open-source machine learning, such as Databrick's Dolly dataset and Microsoft's LoRA, to deliver NLP capabilities at a fraction of the size of GPT-3.5. tinyChat leverages the Google Flan-T5-Large 770M parameter model as its base combined with adaptor weights trained on the Dolly 15k dataset. This is accomplished using a method of training known as LoRA. tinyChat provides ChatGPT-like capabilities on tasks like summarization, question answering, and sentiment analysis, while remaining open source under the Apache 2.0 license and at 1% the size of GPT-3.5. This project aims to initiate discussions around efficient model architectures and responsible use of generative AI. Its acccessible via HuggingFace model hub and with its code repository on Github, tinyChat is available for experimentation and contribution. 
 
